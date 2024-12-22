@@ -1,4 +1,5 @@
 import { Button } from '../Button'
+import { Input } from '../Input'
 import { User } from '../User'
 
 export const Sidebar = () => {
@@ -7,11 +8,7 @@ export const Sidebar = () => {
       <h2 className='text-red-600 font-extrabold font-5xl uppercase text-4xl mb-10'>
         Watchlists
       </h2>
-      <input
-        type='text'
-        placeholder='Пошук'
-        className='p-2 bg-black border-2 border-slate-700 rounded-lg w-full'
-      />
+      <Input type='text' placeholder='Пошук' />
       <div className='flex flex-col my-6'>
         <Button variant='secondary'>Головна</Button>
         <Button variant='secondary'>Історія</Button>
