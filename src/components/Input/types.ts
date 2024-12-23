@@ -1,4 +1,5 @@
-export type TInput = {
-  type: string
-  placeholder: string
+export interface TInput {
+  change?: (e: React.ChangeEvent<HTMLInputElement>) => void // Оновлено
+  placeholder?: string
+  type?: string
 }

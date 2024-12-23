@@ -2,7 +2,7 @@ import { Button } from '../../components/Button'
 import { FilmCard } from '../../components/FilmCard'
 import { Input } from '../../components/Input'
 import { Message } from '../../components/Message'
-import { filmsData } from './data'
+import { filmsData } from '../../components/data'
 
 export const Main = () => {
   return (
