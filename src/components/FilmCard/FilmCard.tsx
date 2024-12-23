@@ -3,12 +3,12 @@ import { TCard } from './types'
 
 export const FilmCard = ({ title, year, rating, image }: TCard) => {
   const raitingEmoji = () => {
-    if (rating < 50) {
-      return '😡'
-    } else if (rating >= 50 && rating <= 80) {
-      return '😐'
+    if (rating > 80) {
+      return '/src/assets/greate.svg'
+    } else if (rating >= 35 && rating <= 80) {
+      return '/src/assets/good.svg'
     } else {
-      return '😊'
+      return '/src/assets/bad.svg'
     }
   }
 
@@ -25,7 +25,7 @@ export const FilmCard = ({ title, year, rating, image }: TCard) => {
         </Button>
       </div>
       <div className='rating flex flex-row justify-between p-2'>
-        <p className='text-4xl'>{emoji}</p>
+        <img src={emoji} alt='stiker' className='w-10' />
         <p className='self-center'>{rating}/100</p>
       </div>
     </div>

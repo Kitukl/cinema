@@ -5,6 +5,7 @@ import { Input } from '../Input'
 import { ListPopup } from '../ListPopup/ListPopup'
 import { LoginPopup } from '../LoginPopup'
 import { User } from '../User'
+import { list } from '../lists'
 
 export const Sidebar = () => {
   const navigate = useNavigate()
@@ -18,17 +19,25 @@ export const Sidebar = () => {
       <Input type='text' placeholder='Пошук' />
       <div className='flex flex-col my-6'>
         <Button variant='secondary' click={() => navigate('/')}>
-          Головна
+          <img src='/src/assets/home.svg' alt='' />
+          <p>Головна</p>
         </Button>
         <Button variant='secondary' click={() => navigate('/history')}>
-          Історія
+          <img src='/src/assets/history.svg' alt='' />
+          <p>Історія</p>
         </Button>
         <Button variant='primary' click={() => setIsOpenListPopup(true)}>
-          Додати список
+          + Додати список
         </Button>
       </div>
       <h4 className='uppercase font-bold text-lg'>Мій список</h4>
-      <div className='array flex-grow'></div>
+      <div className='flex flex-col mt-4 gap-3 overflow-scroll max-h-[420px]'>
+        {list.map(el => (
+          <Button variant='list' key={el}>
+            {el}
+          </Button>
+        ))}
+      </div>
       <div className='mt-auto'>
         <User
           isLogged={false}
