@@ -11,7 +11,7 @@ export const History = () => {
         <Button variant='primary'>Пошук</Button>
         <Button variant='primary'>Очистити історію</Button>
       </div>
-      <div className='mt-[90px] grid grid-cols-4 gap-y-14'>
+      <div className='mt-[90px] grid grid-cols-5 gap-y-8'>
         {filmsData.map(el => (
           <FilmCard
             key={el.title}

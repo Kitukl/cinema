@@ -15,8 +15,8 @@ export const FilmCard = ({ title, year, rating, image }: TCard) => {
   const emoji = raitingEmoji()
 
   return (
-    <div className='w-[270px] h-[620px] bg-[rgb(50,50,50)] flex flex-col rounded-lg'>
-      <img src={image} alt='Film image' className='rounded-lg' />
+    <div className='w-[250px] h-[590px] bg-[rgb(50,50,50)] flex flex-col rounded-lg'>
+      <img src={image} alt='Film image' className='rounded-lg w-full' />
       <p className='text-lg p-2 font-bold'>{title}</p>
       <div className='flex flex-row justify-between p-3'>
         <p className='font-thin  text-lg'>({year})</p>
