@@ -18,7 +18,7 @@ export const Main = () => {
         <Button variant='primary'>Пошук</Button>
       </div>
       <h2 className='text-4xl font-bold mb-[50px]'>Популярні фільми</h2>
-      <div className='grid grid-cols-5 gap-y-8 '>
+      <div className='flex flex-wrap gap-8'>
         {filmsData.map(el => (
           <FilmCard
             key={el.title}

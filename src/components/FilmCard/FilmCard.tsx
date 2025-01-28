@@ -21,7 +21,7 @@ export const FilmCard = ({ title, year, rating, image }: TCard) => {
       <div className='flex flex-row justify-between p-3'>
         <p className='font-thin  text-lg'>({year})</p>
         <Button variant='save'>
-          <img src='/src/assets/save.svg' alt='save' />
+          <img src='/src/' alt='save' />
         </Button>
       </div>
       <div className='rating flex flex-row justify-between p-2'>
