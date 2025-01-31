@@ -1,4 +1,3 @@
-import { Button } from '../Button'
 import { TCard } from './types'
 
 export const FilmCard = ({ title, year, rating, image }: TCard) => {
@@ -20,9 +19,6 @@ export const FilmCard = ({ title, year, rating, image }: TCard) => {
       <p className='text-lg p-2 font-bold'>{title}</p>
       <div className='flex flex-row justify-between p-3'>
         <p className='font-thin  text-lg'>({year})</p>
-        <Button variant='save'>
-          <img src='/src/' alt='save' />
-        </Button>
       </div>
       <div className='rating flex flex-row justify-between p-2'>
         <img src={emoji} alt='stiker' className='w-10' />
