@@ -16,7 +16,7 @@ export const Sidebar = () => {
       <h2 className='text-red-600 font-extrabold font-5xl uppercase text-4xl mb-10'>
         Watchlists
       </h2>
-      <Input type='text' placeholder='Пошук' />
+      <Input type='text' placeholder='Пошук' variant='SEARCH' />
       <div className='flex flex-col my-6'>
         <Button variant='secondary' click={() => navigate('/')}>
           <img src='/src/assets/home.svg' alt='' />

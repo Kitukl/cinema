@@ -15,7 +15,7 @@ export const CLASSNAMES = {
     PANEL:
       'flex justify-between pt-10 pb-border-line px-14 sm:px-14 md:px-28 lg:px-28',
     TITLE:
-      'w-21 h-7 self-end font-gilroy weight-normal text-xl sm: text-xl md:text-2xl lg-2xl uppercase',
+      'w-21 h-7 self-end font-gilroy weight-normal text-xl sm:text-xl md:text-2xl lg-2xl uppercase',
     CLOSE_BUTTON: 'text-3xl self-start',
     WINDOW:
       'w-full bg-[rgb(16,16,16)] border-[1px] border-red-400 absolute right-0 top-0 h-full sm:w-full md:w-2/3 lg:w-5/12 z-1000',

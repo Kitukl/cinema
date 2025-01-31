@@ -16,7 +16,7 @@ export const ListPopup = ({ state, setState }: TListPopup) => {
         </div>
         <div className='flex flex-row'>
           <p className='font-bold w-48 self-center'>Пошук фільму</p>
-          <Input placeholder='' type='text' />
+          <Input placeholder='' type='text' variant='SEARCH' />
         </div>
         <div className='grid grid-cols-3 gap-5 mt-7'></div>
       </div>

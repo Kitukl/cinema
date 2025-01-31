@@ -14,7 +14,7 @@ export const Main = () => {
         переглянутий.
       </Message>
       <div className='flex flex-row my-[40px] gap-5 w-[1000px]'>
-        <Input type='text' placeholder='Пошук фільму' />
+        <Input type='text' placeholder='Пошук фільму' variant='SEARCH' />
         <Button variant='primary'>Пошук</Button>
       </div>
       <h2 className='text-4xl font-bold mb-[50px]'>Популярні фільми</h2>

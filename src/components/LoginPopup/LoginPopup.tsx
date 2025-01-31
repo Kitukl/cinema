@@ -1,6 +1,8 @@
 import { PopupTemplate } from '../PopupTemplate'
 import { TLoginPopup } from './types'
 
+import { LoginForm } from '../LoginForm'
+
 export const LoginPopup = ({ state, setState }: TLoginPopup) => {
   return (
     <PopupTemplate
@@ -10,7 +12,7 @@ export const LoginPopup = ({ state, setState }: TLoginPopup) => {
       position='right'
     >
       <div className='flex-col w-100vw'>
-        <div className='mx-10 sm: md:mx-18 lg:mx-14 xl:mx-28 mb-6'>
+        <div className='mx-14 sm: md:mx-18 lg:mx-14 xl:mx-28 mb-6'>
           <h4 className='font-gilroy text-xl sm:text-xl md:text-2xl lg:text-2xl uppercase'>
             Увійдіть у свій аккаунт
           </h4>
@@ -18,7 +20,9 @@ export const LoginPopup = ({ state, setState }: TLoginPopup) => {
             Для входу введіть, будь ласка, пошту та пароль:
           </p>
         </div>
-        <div className='flex justify-center'>{/*TODO: Login Form */}</div>
+        <div className='flex justify-center'>
+          <LoginForm />
+        </div>
       </div>
     </PopupTemplate>
   )

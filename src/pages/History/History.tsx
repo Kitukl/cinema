@@ -7,7 +7,7 @@ export const History = () => {
   return (
     <div className='flex flex-col ml-[500px] w-full'>
       <div className='flex flex-row w-[1100px] mt-[80px] gap-5'>
-        <Input placeholder='Пошук по історії' type='text' />
+        <Input placeholder='Пошук по історії' type='text' variant='SEARCH' />
         <Button variant='primary'>Пошук</Button>
         <Button variant='primary'>Очистити історію</Button>
       </div>
