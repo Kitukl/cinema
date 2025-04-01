@@ -1,6 +1,6 @@
 export type TCard = {
   title: string
-  year: string
+  year: number
   rating: number
   image: string
 }
