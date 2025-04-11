@@ -1,8 +1,8 @@
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router'
 import './App.css'
 import { Sidebar } from './components/Sidebar/Sidebar.tsx'
-import { History } from './pages/History/History.tsx'
 import { Main } from './pages/Main/Main.tsx'
+import { Register } from './pages/Register/Register.tsx'
 
 const Layout = () => {
   return (
@@ -22,11 +22,11 @@ const router = createBrowserRouter([
         path: '/',
         element: <Main />,
       },
-      {
-        path: '/history',
-        element: <History />,
-      },
     ],
+  },
+  {
+    path: '/register',
+    element: <Register />,
   },
 ])
 

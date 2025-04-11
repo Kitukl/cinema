@@ -23,7 +23,6 @@ export const Main = () => {
     const fetchFilms = async () => {
       try {
         const { data } = await axios.get('http://localhost:5218/films')
-        console.log(data)
         setFilms(data)
       } catch (e) {
         console.error('Failed to fetch films:', e)
@@ -38,7 +37,6 @@ export const Main = () => {
       setFilm(data)
     }
     findFilm()
-    console.log(film)
   }, [title])
 
   return (
@@ -65,7 +63,7 @@ export const Main = () => {
         <div className='mb-8'>
           <h2 className='text-4xl font-bold mb-[50px]'>Шуканий фільм</h2>
           <FilmCard
-            key={film.id || index}
+            key={film.id}
             title={film.title}
             image={film.poster}
             rating={film.rating}
