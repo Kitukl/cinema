@@ -85,7 +85,7 @@ export const Sidebar = () => {
           + Додати список
         </Button>
       </div>
-      <h4 className='uppercase font-bold text-lg'>Мій список</h4>
+      <h4 className='uppercase font-bold text-lg'>Мої списки</h4>
       <div className='flex flex-col mt-4 gap-3 max-h-[420px]'>
         {data.map(el => (
           <Button
