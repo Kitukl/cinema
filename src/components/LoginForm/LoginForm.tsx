@@ -16,8 +16,7 @@ export const LoginForm = () => {
 
       const token = res.data
       localStorage.setItem('token', token)
-
-      console.log('Login successful, token:', token)
+      window.location.reload()
     } catch (e) {
       console.error('Login failed', e)
     }
