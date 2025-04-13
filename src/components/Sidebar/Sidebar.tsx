@@ -65,6 +65,12 @@ export const Sidebar = () => {
     fetch()
   }, [token])
 
+  const handleLogout = () => {
+    localStorage.removeItem('token')
+    navigate('/')
+    window.location.reload()
+  }
+
   return (
     <aside className='bg-black px-20 py-5 h-full fixed'>
       <h2 className='text-red-600 font-extrabold font-5xl uppercase text-4xl mb-10'>
@@ -82,20 +88,25 @@ export const Sidebar = () => {
       <h4 className='uppercase font-bold text-lg'>Мій список</h4>
       <div className='flex flex-col mt-4 gap-3 max-h-[420px]'>
         {data.map(el => (
-          <Button variant='list' key={el.id}>
+          <Button
+            variant='list'
+            key={el.id}
+            click={() => navigate(`/list/${el.id}`)}
+          >
             {el.title}
           </Button>
         ))}
       </div>
-      <div className='mt-auto'>
+      <div className='mt-auto flex items-center'>
         {user ? (
-          <User
-            isLogged={true}
-            username={user.userName}
-            click={() => {
-              setIsOpenLoginPopup(true)
-            }}
-          />
+          <>
+            <User
+              isLogged={true}
+              username={user.userName}
+              click={() => setIsOpenLoginPopup(true)}
+              handleLogout={handleLogout}
+            />
+          </>
         ) : (
           <User
             isLogged={false}

@@ -1,6 +1,7 @@
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router'
 import './App.css'
 import { Sidebar } from './components/Sidebar/Sidebar.tsx'
+import { ListPage } from './pages/ListPage/ListPage.tsx'
 import { Main } from './pages/Main/Main.tsx'
 import { Register } from './pages/Register/Register.tsx'
 
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Main />,
+      },
+      {
+        path: '/list/:id',
+        element: <ListPage />,
       },
     ],
   },
