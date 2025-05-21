@@ -1,12 +1,13 @@
 import axios from 'axios'
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router'
-import { FilmCard } from '../../components/FilmCard'
+import {useEffect, useState} from 'react'
+import {useNavigate, useParams} from 'react-router'
+import {FilmCard} from '../../components/FilmCard'
 
 export const ListPage = () => {
   const { id } = useParams()
-  const [list, setList] = useState(null) // Set initial state to null
+  const [list, setList] = useState(null)
   const token = localStorage.getItem('token')
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetch = async () => {
@@ -50,6 +51,7 @@ export const ListPage = () => {
                   image={film.poster}
                   rating={film.rating}
                   year={film.year}
+                  click={() => navigate(`/films/${film?.id}`)}
                 />
               ))
             ) : (

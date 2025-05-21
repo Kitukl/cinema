@@ -3,4 +3,5 @@ export type TCard = {
   year: number
   rating: number
   image: string
+  click: () => void
 }

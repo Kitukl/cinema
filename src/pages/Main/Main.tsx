@@ -1,15 +1,17 @@
 import axios from 'axios'
-import { useEffect, useState } from 'react'
-import { Button } from '../../components/Button'
-import { FilmCard } from '../../components/FilmCard'
-import { Input } from '../../components/Input'
-import { Message } from '../../components/Message'
+import {useEffect, useState} from 'react'
+import {Button} from '../../components/Button'
+import {FilmCard} from '../../components/FilmCard'
+import {Input} from '../../components/Input'
+import {Message} from '../../components/Message'
+import {useNavigate} from 'react-router'
 
 export const Main = () => {
   const [title, setTitle] = useState('')
   const [temp, setTemp] = useState('')
   const [film, setFilm] = useState<null | TFilm>(null)
   const [films, setFilms] = useState<null | TFilm[]>([])
+  const navigate = useNavigate()
 
   type TFilm = {
     id: string
@@ -68,6 +70,7 @@ export const Main = () => {
             image={film.poster}
             rating={film.rating}
             year={film.year}
+            click={() => navigate(`/films/${film?.id}`)}
           />
         </div>
       )}
@@ -80,6 +83,7 @@ export const Main = () => {
             image={film.poster}
             rating={film.rating}
             year={film.year}
+            click={() => navigate(`/films/${film?.id}`)}
           />
         ))}
       </div>

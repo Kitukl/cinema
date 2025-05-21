@@ -1,9 +1,10 @@
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router'
+import {createBrowserRouter, Outlet, RouterProvider} from 'react-router'
 import './App.css'
-import { Sidebar } from './components/Sidebar/Sidebar.tsx'
-import { ListPage } from './pages/ListPage/ListPage.tsx'
-import { Main } from './pages/Main/Main.tsx'
-import { Register } from './pages/Register/Register.tsx'
+import {Sidebar} from './components/Sidebar/Sidebar.tsx'
+import {ListPage} from './pages/ListPage/ListPage.tsx'
+import {Main} from './pages/Main/Main.tsx'
+import {Register} from './pages/Register/Register.tsx'
+import {FilmPage} from './pages/FilmPage/FilmPage.tsx'
 
 const Layout = () => {
   return (
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/list/:id',
         element: <ListPage />,
+      },
+      {
+        path: '/films/:id',
+        element: <FilmPage />,
       },
     ],
   },
