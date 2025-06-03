@@ -37,7 +37,12 @@ export const ListPage = () => {
 
   const handleDelete = async () => {
     try{
-      await axios.delete(`http://localhost:5218/lists/${id}`)
+      await axios.delete(`http://localhost:5218/lists/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      window.location.reload()
     } catch (e){
       console.log(e)
     }
