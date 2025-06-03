@@ -2,6 +2,7 @@ import axios from 'axios'
 import {useEffect, useState} from 'react'
 import {useNavigate, useParams} from 'react-router'
 import {FilmCard} from '../../components/FilmCard'
+import {Button} from '../../components/Button'
 
 export const ListPage = () => {
   const { id } = useParams()
@@ -32,9 +33,15 @@ export const ListPage = () => {
   if (!list) {
     return <div>Loading...</div>
   }
-
-  // Check the structure of list.films in the console
   console.log('Films:', list.films)
+
+  const handleDelete = async () => {
+    try{
+      await axios.delete(`http://localhost:5218/lists/${id}`)
+    } catch (e){
+      console.log(e)
+    }
+  }
 
   return (
     <main className='w-full'>
@@ -42,6 +49,7 @@ export const ListPage = () => {
         <h2 className='text-3xl font-bold mb-5'>{list.title}</h2>
         <div className='flex flex-col'>
           <h3 className='text-2xl font-semibold'>Фільми</h3>
+          <Button click={handleDelete}>Видалити</Button>
           <div className='grid grid-cols-5 gap-6 mt-5 ml-80'>
             {list.films && list.films.length > 0 ? (
               list.films.map(film => (
